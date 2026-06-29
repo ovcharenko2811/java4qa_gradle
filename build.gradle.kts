@@ -21,3 +21,17 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+// ==================== Кодировка UTF-8 ====================
+
+// Для компиляции
+tasks.withType<JavaCompile>().configureEach {
+    options.encoding = "UTF-8"
+}
+
+// Для запуска через ./gradlew run
+tasks.withType<JavaExec>().configureEach {
+    systemProperty("file.encoding", "UTF-8")
+    systemProperty("console.encoding", "UTF-8")
+    systemProperty("stdout.encoding", "UTF-8")
+}

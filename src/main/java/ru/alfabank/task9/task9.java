@@ -1,4 +1,4 @@
-package ru.alfabank;
+package ru.alfabank.task9;
 
 import com.github.lalyos.jfiglet.FigletFont;
 import net.datafaker.Faker;
